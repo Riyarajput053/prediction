@@ -142,10 +142,9 @@ else:
         sel_thal = thalium[thal]
      
     
-    heart_diagnosis = ''
-    input_data = [float(age), (sel_gender), (sel_cp), float(trestbps), float(chol), (sel_fbs), (sel_restecg), (sel_thal), (sel_exang), float(oldpeak), (sel_slope), float(ca), (sel_thal)]
-
-
+   heart_diagnosis = ''
+    input_data = [age, sel_gender, sel_cp, trestbps, chol, sel_fbs, sel_restecg, sel_thal, sel_exang, oldpeak, sel_slope, ca, sel_thal]
+    input_data_diab = [float(x) for x in input_data]
     # Check if all inputs are numeric
     if st.button('Heart Disease test result'):
         if age=='' or trestbps=='' or chol=='' or thalach=="" or oldpeak=='' or ca=='' or thal=='' :
