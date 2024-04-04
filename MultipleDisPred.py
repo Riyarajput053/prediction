@@ -143,14 +143,15 @@ else:
      
     
     heart_diagnosis = ''
-    input_data = [age, sel_gender, sel_cp, trestbps, chol, sel_fbs, sel_restecg, sel_thal, sel_exang, oldpeak, sel_slope, ca, sel_thal]
-    input_data = [float(x) for x in input_data]
+    
 
     # Check if all inputs are numeric
     if st.button('Heart Disease test result'):
         if age=='' or trestbps=='' or chol=='' or thalach=="" or oldpeak=='' or ca=='' or thal=='' :
             st.warning("Please fill out all the details")
         else:
+            input_data = [age, sel_gender, sel_cp, trestbps, chol, sel_fbs, sel_restecg, sel_thal, sel_exang, oldpeak, sel_slope, ca, sel_thal]
+            input_data = [float(x) for x in input_data]
         # Predict using the model
             print("Input Data for Prediction:", input_data)
             heart_prediction = heart_disease_model.predict([input_data])
