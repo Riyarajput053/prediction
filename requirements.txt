@@ -1,6 +1,6 @@
 streamlit-option-menu
 pickle5
 numpy
-sklearn
+scikit-learn
 
 
