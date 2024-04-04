@@ -61,15 +61,11 @@ if st.button('Heart Disease test result'):
 
             # Predict using the model
             print("Input Data for Prediction:", input_data)
-            
-
-            
              heart_prediction = heart_disease_model.predict([input_data])
              if heart_prediction[0] == 1:
                  heart_diagnosis = 'The person has a healthy heart'
              else:
                  heart_diagnosis = 'The person has an unhealthy heart'
-            heart_diagnosis = 'Mock result: The person has a healthy heart'
 
         except ValueError:
             st.error("Error: Invalid input. Please ensure all inputs are numeric.")
